@@ -1,0 +1,71 @@
+
+<div class="container-fluid">
+  <div class="row">
+    <app-mp-sidebar [isCollapsed] = 'isSideBarCollapsed'></app-mp-sidebar>
+ 
+    <div class="col  mp-layout-sectionWrapper" >
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-light mp-navbar"> 
+         
+          <!-- Side Bar collapse button -->
+          <button class="navbar-toggler sidebar-button-collapser" type="button" (click)="collapseSideBar()"  aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- BRAND -->
+          <a [routerLink]="['/home/dashboard']" class="navbar-brand ">
+            <img class="img-fluid logo-brand " src="../../assets/images/logo.png" alt="logo">
+          </a>
+
+           <!-- Close button -->
+           <button *ngIf="!isDisplayed" (click)="collapseSideBar()" type="button" class="close" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+          </button>
+
+          <!-- Nav Bar collapse button -->
+          <button class="navbar-toggler upperbar-button-toggler" *ngIf="isDisplayed" type="button" data-toggle="collapse" data-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+            <div class="collapse navbar-collapse" id="navbarMenu">
+              <ul class="navbar-nav ml-auto mt-2 mt-lg-0 userinfo-wrapper">
+                  <li class="nav-item">
+                      <a class="nav-link hideMenu" href="#">Favorite</a>
+                  </li>
+                  <li class="nav-item">
+                      <a class="nav-link hideMenu " href="#">Export</a>
+                  </li>
+                <li class="nav-item">
+                    <a class="nav-link topMenuStore" href="#"><i class="material-icons">store</i>Mona Lisa Store</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="#">Da Vinci</a>
+                </li> -->
+                <li class="nav-item" *ngIf='!isLoggedIn()'>
+                  <a class="nav-link" (click)="Login()">Login</a>
+                </li>
+                <li class="nav-item" *ngIf='isLoggedIn()'>
+                    <a class="nav-link" (click)="Logout()">logout</a>
+                  </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link disabled" href="#">Disabled</a>
+                </li> -->
+              </ul>
+              <!-- <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+              </form> -->
+            </div>
+      </nav> 
+      <section>
+          <router-outlet></router-outlet>
+      </section>
+    </div>  
+  </div>
+
+
+  
+
+
+
+

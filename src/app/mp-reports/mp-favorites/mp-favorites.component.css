@@ -1,0 +1,31 @@
+h4 {
+    font-weight: 700;
+    }
+h6 {
+    color: #39BEB9
+}
+
+.fontColor {
+    display: none;
+}
+i {
+    font-size: 0.7rem
+}
+.exp_favButton {
+    display: flex;
+    align-items: center;
+}
+i {
+    padding-right: 5px;
+}
+@media (min-width: 768px) {
+.fontColor {
+    display: initial;
+    color: black;
+    font-size: 0.8rem;
+    height: 2rem
+}
+
+
+
+}

@@ -1,0 +1,14 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/oidc-client/1.4.1/oidc-client.min.js"></script>
+
+<script> 
+// console.log('here in login call back');
+const mgr = new Oidc.UserManager();
+mgr.signinRedirectCallback().then(() => {
+    window.history.replaceState({},
+    window.document.title,
+    window.location.origin);
+window.location = '/';
+}, error => {
+    console.log(error);
+});
+</script>

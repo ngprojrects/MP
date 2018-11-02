@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 50 40" style="enable-background:new 0 0 50 40;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#DBF0F4;}
+	.st1{fill:#194A77;}
+	.st2{fill:#F69E24;}
+	.st3{fill:#F7C6C9;}
+	.st4{fill:#FFFFFF;}
+	.st5{fill:#53BA82;}
+	.st6{fill:#C12629;}
+	.st7{fill:#FDBE13;}
+	.st8{fill:none;stroke:#194A77;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st9{fill:#56C8E9;}
+	.st10{fill:#1BB7EB;}
+	.st11{fill:#4367B2;}
+	.st12{fill:#FAAE28;}
+	.st13{fill:#F89E28;}
+	.st14{fill:#F68E27;}
+	.st15{fill:#F47F25;}
+	.st16{fill:#F26E24;}
+	.st17{fill:#F05B24;}
+	.st18{fill:#EE4524;}
+	.st19{fill:#ED2724;}
+	.st20{fill:#E62E35;}
+	.st21{fill:#E03348;}
+	.st22{fill:#DB3758;}
+	.st23{fill:#D63B68;}
+	.st24{fill:#D03D77;}
+	.st25{fill:#CA4186;}
+	.st26{fill:#C14397;}
+	.st27{fill:#F05669;}
+	.st28{fill:#F5887E;}
+	.st29{display:none;}
+	.st30{display:inline;}
+	.st31{font-family:'MyriadPro-Regular';}
+	.st32{font-size:12px;}
+</style>
+<g id="Layer_1">
+	<g>
+		<g>
+			<path class="st0" d="M29,21.1V16h-8v8h5.1C26.8,22.8,27.8,21.8,29,21.1z"/>
+			<rect x="9" y="4" class="st0" width="8" height="8"/>
+			<rect x="33" y="4" class="st0" width="8" height="8"/>
+			<path class="st1" d="M17,13H9c-0.6,0-1-0.4-1-1V4c0-0.6,0.4-1,1-1h8c0.6,0,1,0.4,1,1v8C18,12.6,17.6,13,17,13z M10,11h6V5h-6V11z
+				"/>
+			<path class="st1" d="M29,13h-8c-0.6,0-1-0.4-1-1V4c0-0.6,0.4-1,1-1h8c0.6,0,1,0.4,1,1v8C30,12.6,29.6,13,29,13z M22,11h6V5h-6V11
+				z"/>
+			<path class="st1" d="M41,13h-8c-0.6,0-1-0.4-1-1V4c0-0.6,0.4-1,1-1h8c0.6,0,1,0.4,1,1v8C42,12.6,41.6,13,41,13z M34,11h6V5h-6V11
+				z"/>
+			<rect x="9" y="28" class="st0" width="8" height="8"/>
+			<path class="st1" d="M17,37H9c-0.6,0-1-0.4-1-1v-8c0-0.6,0.4-1,1-1h8c0.6,0,1,0.4,1,1v8C18,36.6,17.6,37,17,37z M10,35h6v-6h-6
+				V35z"/>
+			<path class="st1" d="M17,25H9c-0.6,0-1-0.4-1-1v-8c0-0.6,0.4-1,1-1h8c0.6,0,1,0.4,1,1v8C18,24.6,17.6,25,17,25z M10,23h6v-6h-6
+				V23z"/>
+			<path class="st1" d="M41,21c-0.6,0-1-0.4-1-1v-3h-6c0,0.6-0.4,1-1,1s-1-0.4-1-1v-1c0-0.6,0.4-1,1-1h8c0.6,0,1,0.4,1,1v4
+				C42,20.6,41.6,21,41,21z"/>
+			<path class="st1" d="M22.1,25H21c-0.6,0-1-0.4-1-1v-8c0-0.6,0.4-1,1-1h8c0.6,0,1,0.4,1,1v1.1c0,0.6-0.4,1-1,1s-1-0.4-1-1V17h-6v6
+				h0.1c0.6,0,1,0.4,1,1S22.6,25,22.1,25z"/>
+			<path class="st1" d="M25,37h-4c-0.6,0-1-0.4-1-1v-8c0-0.6,0.4-1,1-1h1c0.6,0,1,0.4,1,1s-0.4,1-1,1v6h3c0.6,0,1,0.4,1,1
+				S25.6,37,25,37z"/>
+		</g>
+		<g>
+			<path class="st5" d="M32,32.5c-0.3,0-0.5-0.1-0.7-0.3l-3-3c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l2.3,2.3l4.3-4.3
+				c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4l-5,5C32.5,32.4,32.3,32.5,32,32.5z"/>
+			<path class="st5" d="M33,37c-5,0-9-4-9-9s4-9,9-9s9,4,9,9S38,37,33,37z M33,21c-3.9,0-7,3.1-7,7s3.1,7,7,7s7-3.1,7-7
+				S36.9,21,33,21z"/>
+		</g>
+	</g>
+</g>
+<g id="nyt_x5F_exporter_x5F_info" class="st29">
+	<text transform="matrix(1 0 0 1 -120 -100)" class="st30"><tspan x="0" y="0" class="st31 st32">&lt;nyt_prefs&gt;</tspan><tspan x="0" y="14.4" class="st31 st32">  &lt;nyt_prefix/&gt;</tspan><tspan x="0" y="28.8" class="st31 st32">  &lt;nyt_suffix/&gt;</tspan><tspan x="0" y="43.2" class="st31 st32">  &lt;nyt_base_path&gt;~/Desktop&lt;/nyt_base_path&gt;</tspan><tspan x="0" y="57.6" class="st31 st32">  &lt;nyt_scaling&gt;100%&lt;/nyt_scaling&gt;</tspan><tspan x="0" y="72" class="st31 st32">  &lt;nyt_transparency&gt;true&lt;/nyt_transparency&gt;</tspan><tspan x="0" y="86.4" class="st31 st32">  &lt;nyt_format&gt;PNG 24&lt;/nyt_format&gt;</tspan><tspan x="0" y="100.8" class="st31 st32">  &lt;nyt_export_code&gt;artboards&lt;/nyt_export_code&gt;</tspan><tspan x="0" y="115.2" class="st31 st32">&lt;/nyt_prefs&gt;</tspan></text>
+</g>
+</svg>

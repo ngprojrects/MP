@@ -1,0 +1,30 @@
+.icon { 
+    font-size: 2rem;
+    color: #39BEB9
+}
+.iconWrapper {
+    margin: 0 auto;
+}
+.viewIcon {
+    display: flex;
+}
+.card-footer {
+    margin: 0 auto;
+    font-size: 1.5rem;
+    background-color: transparent;
+    border: none
+}
+.cardBodyWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center
+
+}
+.card-text {
+    font-weight: 900;
+}
+.textAlign {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}

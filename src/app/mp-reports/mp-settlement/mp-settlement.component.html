@@ -1,0 +1,31 @@
+<div class="row" id="metrics">
+  <div class="col-md-4 col-sm-6"  *ngFor="let metric of metrics">
+  
+     <app-chart class="card-deck mb-2" [mTitle]="metric.title" [mBodyValue]="metric.body" [mFooter]="metric.footer" [mIcon]="metric.icon"></app-chart>
+  
+  </div> 
+</div>
+
+<div class="table-responsive">  
+<table class="table">
+  <!-- <thead>
+    <tr>
+      <th *ngFor="let header of headers" scope="col">{{head}} </th>
+    </tr>
+  </thead> -->
+  <tbody>
+    <tr mdbTableCol *ngFor="let el of tData let i = index">
+      <th scope="row">{{i}}</th>
+      <td>{{el.posDate}}</td>
+      <td>{{el.authDate}}</td>
+      <td>{{el.type}}</td>
+      <td>{{el.captureAmt}}</td>
+      <td>{{el.brand}}</td>
+      <td>{{el.last4}}</td>
+      <td>{{el.type}}</td>
+      <td>{{el.method}}</td>
+      <td>{{el.status}}</td>
+    </tr>
+  </tbody>
+</table>
+</div>

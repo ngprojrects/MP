@@ -1,0 +1,18 @@
+
+<div class="container componentWrapper">
+    <div class="row">
+      <div class="col">
+        <h6>Reports</h6>
+        <h4>Authorization</h4>
+
+      </div>
+    </div>
+      <div class="row" id="metrics">
+      
+
+        <div class="col-md-3 col-sm-6 col-xs-12"  *ngFor="let metric of metrics">
+          <app-chart [mTitle]="metric.title" [mBodyValue]="metric.body" [mFooter]="metric.footer" [mIcon]="metric.icon"></app-chart>
+        </div>
+      </div>
+  
+</div>

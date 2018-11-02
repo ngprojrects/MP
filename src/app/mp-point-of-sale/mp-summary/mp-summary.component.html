@@ -1,0 +1,28 @@
+<div class="container">
+  
+    <div class="row">
+        <div class="col-md-4 col-lg-4 col-sm-12 col-xs-12" align="left">
+          <h2>Sales Summary</h2>
+        </div>
+
+    </div>
+
+    <div class="row" id="metrics">
+        <div class="col-md-4 col-sm-6"  *ngFor="let metric of metrics">
+            <app-chart  class="card-deck mb-2" [mTitle]="metric.title" [mBodyValue]="metric.body" [mFooter]="metric.footer" [mIcon]="metric.icon"></app-chart>
+        </div>
+    </div>
+
+    <div>
+      <app-graphic-chart [title]="rangeGraphicChartTitle" [type]="graphicChartRange.type" [xAxis]="graphicChartRange.xAxis" [yAxis]="graphicChartRange.yAxis" [toolTip]="graphicChartRange.toolTip" [data]="graphicChartRange.data" *ngIf="graphicChartLoaded"></app-graphic-chart>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-12 col-md-5">
+          <app-graphic-chart [title]="graphicChartDoW.title" [type]="graphicChartDoW.type" [xAxis]="graphicChartDoW.xAxis" [yAxis]="graphicChartDoW.yAxis" [toolTip]="graphicChartDoW.toolTip" [data]="graphicChartDoW.data" *ngIf="graphicChartLoaded"></app-graphic-chart>
+      </div>
+      <div class="col-sm-12 col-md-7">
+          <app-graphic-chart [title]="graphicChartToD.title" [type]="graphicChartToD.type" [xAxis]="graphicChartToD.xAxis" [yAxis]="graphicChartToD.yAxis" [toolTip]="graphicChartToD.toolTip" [data]="graphicChartToD.data"  *ngIf="graphicChartLoaded"></app-graphic-chart>
+      </div>
+    </div>
+</div>

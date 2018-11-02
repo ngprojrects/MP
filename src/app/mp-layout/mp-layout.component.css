@@ -1,0 +1,110 @@
+
+.mp-layout-sectionWrapper{
+    /* margin-left: 16.83333%; */
+    padding-left: 0px;
+    padding-right: 0px;
+    position: absolute;
+    z-index: 500 !important;
+    background-color: white;
+    margin: 0;
+    
+    }
+.mp-navbar {    
+    z-index: 1000;
+    -webkit-box-shadow: 0px 9px 4px -4px rgba(216,216,216,0.75);
+    -moz-box-shadow: 0px 9px 4px -4px rgba(216,216,216,0.75);
+    box-shadow: 0px 9px 4px -4px rgba(216,216,216,0.75);
+    }
+.logo-brand {
+    width: 5rem !important;
+
+}
+section {
+    background-color: #e2e2e2;
+    padding: 1rem 0.5rem;
+}
+.userinfo-wrapper {
+    display: flex;
+    margin-right: 3rem
+}
+.userinfo-wrapper li {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    justify-content: space-between
+}
+.isPushed {
+    margin-left: 50%;
+    -webkit-transition: width 0.3s; /* For Safari 3.1 to 6.0 */
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
+.isNotPushed {
+    margin-left: 0%;
+    -webkit-transition: width 0.3s; /* For Safari 3.1 to 6.0 */
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
+.close {
+    font-size: 2.5rem
+}
+i.material-icons {
+    display:none
+}
+@media (min-width: 768px) {
+    i.material-icons {
+        display:initial;
+        color: #39BEB9
+    }
+
+    .mp-navbar {
+        height: 3.75rem;
+    }
+    .mp-layout-sectionWrapper {
+        margin-left: 16.83333%;
+        padding-left: 0px;
+        padding-right: 0px;
+        position: relative;
+    }
+    /* .side-bar-button {
+        display: none
+    } */
+    .sidebar-button-collapser {
+        display: none;
+    }
+    .upperbar-button-toggler {
+        display: none;
+    }
+    #navbarMenu { 
+        /* -ms-flex-preferred-size: 100%; */
+        /* flex-basis: 100%; */
+        -webkit-box-flex: 1;
+        /* -ms-flex-positive: 1; */
+        flex-grow: 1;
+        -webkit-box-align: center;
+        /* -ms-flex-align: center; */
+        align-items: center;
+        /* display: -webkit-box!important; */
+        /* display: -ms-flexbox!important; */
+        display: flex!important;
+        /* -ms-flex-preferred-size: auto; */
+        flex-basis: auto;
+    }
+    .userinfo-wrapper {
+        flex-direction: row !important
+     }
+     section {
+        background-color: #e2e2e2;
+        padding: 0.5rem 1.5rem;
+    }
+    .hideMenu {
+        display: none
+    }
+    .topMenuStore {
+        display: flex;
+    font-size: 0.8rem;
+    font-weight: 900;
+    align-items: center;
+    }
+    
+}
+
