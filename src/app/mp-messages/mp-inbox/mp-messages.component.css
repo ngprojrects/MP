@@ -137,3 +137,13 @@ perfect-scrollbar{
        color:#58C9E9
    }
 }
+.inbox-border{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+.message-border{
+    padding-right: 0px;
+}
+.letter-padding{
+    padding-left:10px;
+}

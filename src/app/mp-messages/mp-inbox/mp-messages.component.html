@@ -9,22 +9,22 @@
     </div>
 </div>
 <div class="row mt-2 mb-2 pb-5 ml-1 ">
-      <div class="col-sm-3 bg-light ">
+      <div class="col-sm-3 bg-light inbox-border">
         <perfect-scrollbar style="max-width: 600px; max-height: 80vh;">
           <div class="row border-bottom" [ngClass]="{
           'unread-message': message.isVisiblePOS }" *ngFor="let message of messages;let i=index">
             <div class="col-sm-12 inbox" (click)="ProcessMessage(message.eventId)">
               <div class=" mt-3 mb-3">
-                <p class="inbox-head">{{message.eventTypeName}}</p>
-                <p class="inbox-body">{{message.message}}</p>
-                <p class="inbox-date">{{message.timeStamp }}</p>
+                <p class="inbox-head letter-padding">{{message.eventTypeName}}</p>
+                <p class="inbox-body letter-padding">{{message.message}}</p>
+                <p class="inbox-date letter-padding">{{message.timeStamp }}</p>
               </div>
             </div>
           </div>
         </perfect-scrollbar>
       </div>
       <div class="col-sm-1"></div>
-      <div class="col-sm-8 bg-light" >
+      <div class="col-sm-8 bg-light message-border" >
           <perfect-scrollbar *ngIf="messageInfo" style="max-width: 1600px; max-height: 80vh; padding:0; margin: 0;">
        <div> 
            <span class="bold">To </span> <span class="highlight"> {{messageInfo.ToAddress}}</span><br /> 
