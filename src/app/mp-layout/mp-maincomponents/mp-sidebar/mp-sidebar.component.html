@@ -1,72 +1,100 @@
+<nav>
+  <div class=" mp-dashboard-side-menu " [ngClass]="[isCollapsed == true? 'collapseBar':'notCollapsedBar']" id="sidebar">
 
-<nav >
-  <div class=" mp-dashboard-side-menu " [ngClass]="[isCollapsed == true? 'collapseBar':'notCollapsedBar']"  id="sidebar">
-      
     <div class="list-group" id="accordion">
-        <!-- HOME MENU -->
-        <div data-toggle="collapse" data-target="#dashboardmenu"  aria-expanded="true" (click)="addClass('home')" class="list-group-item list-group-item-action mp-sidebar-button {{ butonColor == 'home' ? 'homecolor':''}}">
-          <h6>HOME</h6>
-          
-        </div>        
-            <div class="sub-menu collapse" id="dashboardmenu"  data-parent="#accordion">
-              <a [routerLink]="['/home/dashboard']" [routerLinkActive]="['router-link-active','home-border-link-active']" class="list-group-item list-group-item-action ">Dashboard</a>
-              
-              <a *ngIf="subMenuTitle !='Location' " [routerLink]="['/home/my-account']" [routerLinkActive]="['router-link-active','home-border-link-active']" class="list-group-item list-group-item-action ">
-                {{subMenuTitle}}</a>
-              <a *ngIf="subMenuTitle =='Location' " [routerLink]="['/home/location']" [routerLinkActive]="['router-link-active','home-border-link-active']" class="list-group-item list-group-item-action ">
-                {{subMenuTitle}}</a>
+      <!-- HOME MENU -->
+      <div data-toggle="collapse" data-target="#dashboardmenu" aria-expanded="true" (click)="addClass('home')" class="list-group-item list-group-item-action mp-sidebar-button {{ butonColor == 'home' ? 'homecolor':''}}">
+        <h6>HOME</h6>
 
-              <a [routerLink]="['/home/users']" [routerLinkActive]="['router-link-active','home-border-link-active']" class="list-group-item list-group-item-action ">Users</a>
-            </div>
+      </div>
+      <div class="sub-menu collapse" id="dashboardmenu" data-parent="#accordion">
+        <a [routerLink]="['/home/dashboard']" [routerLinkActive]="['router-link-active','home-border-link-active']"
+          class="list-group-item list-group-item-action ">Dashboard</a>
 
+        <a *ngIf="subMenuTitle !='Location' " [routerLink]="['/home/my-account']" [routerLinkActive]="['router-link-active','home-border-link-active']"
+          class="list-group-item list-group-item-action ">
+          {{subMenuTitle}}</a>
+        <a *ngIf="subMenuTitle =='Location' " [routerLink]="['/home/location']" [routerLinkActive]="['router-link-active','home-border-link-active']"
+          class="list-group-item list-group-item-action ">
+          {{subMenuTitle}}</a>
 
+        <a [routerLink]="['/home/users']" [routerLinkActive]="['router-link-active','home-border-link-active']" class="list-group-item list-group-item-action ">Users</a>
+      </div>
 
-            <!-- Message MEnu -->
-        <div data-toggle="collapse" data-target="#dashboardMessages" (click)="addClass('messages')"  class="list-group-item list-group-item-action mp-sidebar-button {{ butonColor == 'messages' ? 'messagescolor':''}}">
-          <h6>MESSAGES</h6></div>
-          <div class="sub-menu collapse" id="dashboardMessages" data-parent="#accordion"> 
-              <a [routerLink]="['/messages/inbox']" [routerLinkActive]="['router-link-active','message-border-link-active']" class="list-group-item list-group-item-action">Inbox</a>
-              <a [routerLink]="['/messages/archive']" [routerLinkActive]="['router-link-active','message-border-link-active']" class="list-group-item list-group-item-action">Preferences</a>            
-          </div>
+      <!-- Message MEnu -->
+      <div data-toggle="collapse" data-target="#dashboardMessages" (click)="addClass('messages')" class="list-group-item list-group-item-action mp-sidebar-button {{ butonColor == 'messages' ? 'messagescolor':''}}">
+        <h6>MESSAGES</h6>
+      </div>
+      <div class="sub-menu collapse" id="dashboardMessages" data-parent="#accordion">
+        <a [routerLink]="['/messages/inbox']" [routerLinkActive]="['router-link-active','message-border-link-active']"
+          class="list-group-item list-group-item-action">Inbox</a>
+        <a [routerLink]="['/messages/archive']" [routerLinkActive]="['router-link-active','message-border-link-active']"
+          class="list-group-item list-group-item-action">Preferences</a>
+      </div>
 
-          <!-- Reports Menu -->
-        <div data-toggle="collapse" data-target="#dashboardReports" (click)="addClass('reports')" class="list-group-item list-group-item-action mp-sidebar-button {{ butonColor == 'reports' ? 'reportscolor':''}}">
-          <h6>REPORTS</h6></div>
-          <div class="sub-menu collapse" id="dashboardReports" data-parent="#accordion">
-              <a [routerLink]="['/reports/favorite']" [routerLinkActive]="['router-link-active','reports-border-link-active']" class="list-group-item list-group-item-action">Favorite</a>
-              <a [routerLink]="['/reports/card']" [routerLinkActive]="['router-link-active','reports-border-link-active']" class="list-group-item list-group-item-action">Authorization</a>
-              <a [routerLink]="['/reports/settlement']" [routerLinkActive]="['router-link-active','reports-border-link-active']" class="list-group-item list-group-item-action">Settlement</a>
-              <a [routerLink]="['/reports/funding']" [routerLinkActive]="['router-link-active','reports-border-link-active']" class="list-group-item list-group-item-action">Funding</a>
-              <a [routerLink]="['/reports/disputes']" [routerLinkActive]="['router-link-active','reports-border-link-active']" class="list-group-item list-group-item-action">Disputes</a>
-              <a [routerLink]="['/reports/statements']" [routerLinkActive]="['router-link-active','reports-border-link-active']" class="list-group-item list-group-item-action">Statements</a>
-              <!-- <a [routerLink]="['/reports/favorite']" [routerLinkActive]="['router-link-active','reports-border-link-active']" class="list-group-item list-group-item-action">Point of Sale</a> -->
+      <!-- Partners MEnu -->
+      <div data-toggle="collapse" data-target="#dashboardPartners" (click)="addClass('partners')" class="list-group-item list-group-item-action mp-sidebar-button {{ butonColor == 'partners' ? 'partnerscolor':''}}">
+        <h6>PARTNERS</h6>
+      </div>
+      <div class="sub-menu collapse" id="dashboardPartners" data-parent="#accordion">
+        <a [routerLink]="['/partners/dashboard']" [routerLinkActive]="['router-link-active','partners-border-link-active']"
+          class="list-group-item list-group-item-action">Dashboard</a>
+      </div>
 
-            </div>
+      <!-- Reports Menu -->
+      <div data-toggle="collapse" data-target="#dashboardReports" (click)="addClass('reports')" class="list-group-item list-group-item-action mp-sidebar-button {{ butonColor == 'reports' ? 'reportscolor':''}}">
+        <h6>REPORTS</h6>
+      </div>
+      <div class="sub-menu collapse" id="dashboardReports" data-parent="#accordion">
+        <a [routerLink]="['/reports/favorite']" [routerLinkActive]="['router-link-active','reports-border-link-active']"
+          class="list-group-item list-group-item-action">Favorite</a>
+        <a [routerLink]="['/reports/card']" [routerLinkActive]="['router-link-active','reports-border-link-active']"
+          class="list-group-item list-group-item-action">Authorization</a>
+        <a [routerLink]="['/reports/settlement']" [routerLinkActive]="['router-link-active','reports-border-link-active']"
+          class="list-group-item list-group-item-action">Settlement</a>
+        <a [routerLink]="['/reports/funding']" [routerLinkActive]="['router-link-active','reports-border-link-active']"
+          class="list-group-item list-group-item-action">Funding</a>
+        <a [routerLink]="['/reports/disputes']" [routerLinkActive]="['router-link-active','reports-border-link-active']"
+          class="list-group-item list-group-item-action">Disputes</a>
+        <a [routerLink]="['/reports/statements']" [routerLinkActive]="['router-link-active','reports-border-link-active']"
+          class="list-group-item list-group-item-action">Statements</a>
+        <!-- <a [routerLink]="['/reports/favorite']" [routerLinkActive]="['router-link-active','reports-border-link-active']" class="list-group-item list-group-item-action">Point of Sale</a> -->
 
-          <!-- Point of Sale -->
-        <div data-toggle="collapse" data-target="#dashboardPOS" (click)="addClass('pointofsale')" class="list-group-item list-group-item-action mp-sidebar-button {{ butonColor == 'pointofsale' ? 'pointofsalecolor':''}}">
-          <h6>POINT OF SALE</h6></div>
-          <div class="sub-menu collapse" id="dashboardPOS" data-parent="#accordion">
-              <a [routerLink]="['/point-of-sale/summary']" [routerLinkActive]="['router-link-active','pointofsale-border-link-active']" class="list-group-item list-group-item-action">Summary</a>            
-          </div>
+      </div>
 
-          <!-- Market Menu -->
-        <div data-toggle="collapse" data-target="#dashboarMarket" (click)="addClass('market')" class="list-group-item list-group-item-action mp-sidebar-button {{ butonColor == 'market' ? 'marketcolor':''}}">
-          <h6>MARKET</h6></div>
-          <div class="sub-menu collapse" id="dashboarMarket" data-parent="#accordion">
-              <a [routerLink]="['/market/on-the-market']" [routerLinkActive]="['router-link-active','market-border-link-active']" class="list-group-item list-group-item-action">On The Market</a>
-              <a [routerLink]="['/market/listings']" [routerLinkActive]="['router-link-active','market-border-link-active']" class="list-group-item list-group-item-action">Listings</a>
-              <a [routerLink]="['/market/reputation']" [routerLinkActive]="['router-link-active','market-border-link-active']" class="list-group-item list-group-item-action">Reputation</a>
-              <a [routerLink]="['/market/social']" [routerLinkActive]="['router-link-active','market-border-link-active']" class="list-group-item list-group-item-action">Social</a>
-              <a [routerLink]="['/market/website']" [routerLinkActive]="['router-link-active','market-border-link-active']" (click)="collapseBarFromSubmenu()" class="list-group-item list-group-item-action">Website</a>
-          </div>
+      <!-- Point of Sale -->
+      <div data-toggle="collapse" data-target="#dashboardPOS" (click)="addClass('pointofsale')" class="list-group-item list-group-item-action mp-sidebar-button {{ butonColor == 'pointofsale' ? 'pointofsalecolor':''}}">
+        <h6>POINT OF SALE</h6>
+      </div>
+      <div class="sub-menu collapse" id="dashboardPOS" data-parent="#accordion">
+        <a [routerLink]="['/point-of-sale/summary']" [routerLinkActive]="['router-link-active','pointofsale-border-link-active']"
+          class="list-group-item list-group-item-action">Summary</a>
+      </div>
 
-          <!-- Help Menu -->
-        <div data-toggle="collapse" data-target="#dashboardHelp" (click)="addClass('help')" class="list-group-item list-group-item-action mp-sidebar-button {{ butonColor == 'help' ? 'helpcolor':''}}">
-          <h6>HELP</h6></div>
-        <div class="sub-menu collapse" id="dashboardHelp" data-parent="#accordion">
-            <!-- <a class="list-group-item list-group-item-action">Summary</a>             -->
-        </div>
+      <!-- Market Menu -->
+      <div data-toggle="collapse" data-target="#dashboarMarket" (click)="addClass('market')" class="list-group-item list-group-item-action mp-sidebar-button {{ butonColor == 'market' ? 'marketcolor':''}}">
+        <h6>MARKET</h6>
+      </div>
+      <div class="sub-menu collapse" id="dashboarMarket" data-parent="#accordion">
+        <a [routerLink]="['/market/on-the-market']" [routerLinkActive]="['router-link-active','market-border-link-active']"
+          class="list-group-item list-group-item-action">On The Market</a>
+        <a [routerLink]="['/market/listings']" [routerLinkActive]="['router-link-active','market-border-link-active']"
+          class="list-group-item list-group-item-action">Listings</a>
+        <a [routerLink]="['/market/reputation']" [routerLinkActive]="['router-link-active','market-border-link-active']"
+          class="list-group-item list-group-item-action">Reputation</a>
+        <a [routerLink]="['/market/social']" [routerLinkActive]="['router-link-active','market-border-link-active']"
+          class="list-group-item list-group-item-action">Social</a>
+        <a [routerLink]="['/market/website']" [routerLinkActive]="['router-link-active','market-border-link-active']"
+          (click)="collapseBarFromSubmenu()" class="list-group-item list-group-item-action">Website</a>
+      </div>
+
+      <!-- Help Menu -->
+      <div data-toggle="collapse" data-target="#dashboardHelp" (click)="addClass('help')" class="list-group-item list-group-item-action mp-sidebar-button {{ butonColor == 'help' ? 'helpcolor':''}}">
+        <h6>HELP</h6>
+      </div>
+      <div class="sub-menu collapse" id="dashboardHelp" data-parent="#accordion">
+        <!-- <a class="list-group-item list-group-item-action">Summary</a>             -->
+      </div>
 
     </div>
   </div>

@@ -1,151 +1,181 @@
 h6 {
-    margin-top: 8px;
-    font-weight: 700;
+  margin-top: 8px;
+  font-weight: 700;
 }
+
 .list-group-item {
-    font-size: 1rem;
+  font-size: 1rem;
 }
+
 .mp-dashboard-side-menu {
-    position: fixed;
-    z-index: 700;
-    background-color: #282c35;
-    height: 100%;
-    padding-left: 0px;
-    padding-right:0px ;
+  position: fixed;
+  z-index: 700;
+  background-color: #282c35;
+  height: 100%;
+  padding-left: 0px;
+  padding-right: 0px;
 }
+
 .mp-sidebar-button {
-    background-color: #343943;
-    color: white;
-    height: 3.75rem;
-    border-radius: 0px  !important
+  background-color: #343943;
+  color: white;
+  height: 3.75rem;
+  border-radius: 0px !important
 }
+
 .mp-sidebar-button a {
-    height: 5rem;
-    border-radius: 0px  !important
+  height: 5rem;
+  border-radius: 0px !important
 }
 
 .router-link-active {
-    border-left: 20px solid;
-    border-radius: 0px !important
+  border-left: 20px solid;
+  border-radius: 0px !important
 }
 
-ul  {
-    list-style: none;
+ul {
+  list-style: none;
 }
 
 .sub-menu a {
-    background-color: #27282e ;
-    color: rgba(226, 226, 226, 0.5);
-    font-size: 0.875rem;
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
+  background-color: #27282e;
+  color: rgba(226, 226, 226, 0.5);
+  font-size: 0.875rem;
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
 }
+
 .homecolor {
-    background-color: #B6B5DB
+  background-color: #B6B5DB
 }
+
 .home-border-link-active {
-    background-color: #1e2027 !important;
-    border-left-color:  #B6B5DB;
-    color: #B6B5DB!important;
-    font-weight: 700 !important;
+  background-color: #1e2027 !important;
+  border-left-color: #B6B5DB;
+  color: #B6B5DB !important;
+  font-weight: 700 !important;
 }
 
 .messagescolor {
-    background-color: #F05669;    
+  background-color: #F05669;
 }
+
 .message-border-link-active {
-    background-color: #1e2027;
-    border-left-color:   #F05669;
-    color: #F05669 !important;
-    font-weight: 700 !important;
+  background-color: #1e2027;
+  border-left-color: #F05669;
+  color: #F05669 !important;
+  font-weight: 700 !important;
+}
+
+.partnerscolor {
+  background-color: #A5565A;
+}
+
+.partners-border-link-active {
+  background-color: #1e2027;
+  border-left-color: #A5565A;
+  color: #A5565A !important;
+  font-weight: 700 !important;
 }
 
 .reportscolor {
-    background-color: #39BEB9
+  background-color: #39BEB9
 }
+
 .reports-border-link-active {
-    border-left-color:   #39BEB9;
-    color: #39BEB9 !important;
-    font-weight: 700 !important;
+  border-left-color: #39BEB9;
+  color: #39BEB9 !important;
+  font-weight: 700 !important;
 }
 
 .pointofsalecolor {
-    background-color: #54BD85
+  background-color: #54BD85
 }
+
 .pointofsale-border-link-active {
-    border-left-color:   #54BD85;
-    color: #54BD85 !important;
-    font-weight: 700 !important;
+  border-left-color: #54BD85;
+  color: #54BD85 !important;
+  font-weight: 700 !important;
 }
 
 .marketcolor {
-    background-color: #14B2CC
+  background-color: #14B2CC
 }
+
 .market-border-link-active {
-    border-left-color:   #14B2CC;
-    color: #14B2CC !important;
-    font-weight: 700 !important;
+  border-left-color: #14B2CC;
+  color: #14B2CC !important;
+  font-weight: 700 !important;
 }
+
 .helpcolor {
-    background-color: #F69E25
+  background-color: #F69E25
 }
+
 .help-border-link-active {
-    border-left-color:   #F69E25;
-    color: #F69E25 !important;
-    font-weight: 700 !important;
+  border-left-color: #F69E25;
+  color: #F69E25 !important;
+  font-weight: 700 !important;
 }
+
 .alwaysCollapsed {
-    width: 0 !important;
-    overflow: hidden;
+  width: 0 !important;
+  overflow: hidden;
 }
 
 .collapseBar {
-    /* width: 0 !important;
+  /* width: 0 !important;
      -webkit-transition: width 0.3s ease-out; 
     transition: width 0.3s ease-out; 
     overflow: hidden; */
-    visibility: hidden;
+  visibility: hidden;
 }
 
 /* .mp-dashboard-side-menu:hover {
     width: 50%; 
 }*/
 
-.notCollapsedBar{
-    width: 70%;
-    -webkit-transition: width 0.3s; /* For Safari 3.1 to 6.0 */
-    transition: width 0.3s ease-in-out;
-    overflow: scroll;
+.notCollapsedBar {
+  width: 70%;
+  -webkit-transition: width 0.3s;
+  /* For Safari 3.1 to 6.0 */
+  transition: width 0.3s ease-in-out;
+  overflow: scroll;
 }
+
 .sidebar-button-collapser {
-    position: absolute;
-    bottom: 50px;
+  position: absolute;
+  bottom: 50px;
 
 }
 
 @media (min-width: 768px) {
 
-.mp-dashboard-side-menu  {
-    width:16.83333% !important;
-    -webkit-transition: width 0s; /* For Safari 3.1 to 6.0 */
+  .mp-dashboard-side-menu {
+    width: 16.83333% !important;
+    -webkit-transition: width 0s;
+    /* For Safari 3.1 to 6.0 */
     transition: width 0s;
-}
-.collapseBar {
+  }
+
+  .collapseBar {
     visibility: visible
-}
+  }
 
 }
+
 /* .helpcolor {
     background-color: #ffccff
 } */
 
 @media (min-width: 2000px) {
 
-    .sub-menu a{
-        font-size: 1.2rem
-    }
-    h6 {
-        font-size: 1.5rem !important;
-    }
-    
-    }
+  .sub-menu a {
+    font-size: 1.2rem
+  }
+
+  h6 {
+    font-size: 1.5rem !important;
+  }
+
+}

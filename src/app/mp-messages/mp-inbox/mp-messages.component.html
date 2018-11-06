@@ -4,93 +4,104 @@
     <p class="m2">inbox</p>
   </div>
   <div class="col-sm-10"></div>
-    <div class="col-sm-1 pl-c pt-2 ">
-      <button class='btn btn-edit'>Edit</button>
-    </div>
+  <div class="col-sm-1 pl-c pt-2 ">
+    <button class='btn btn-edit'>Edit</button>
+  </div>
 </div>
 <div class="row mt-2 mb-2 pb-5 ml-1 ">
-      <div class="col-sm-3 bg-light inbox-border">
-        <perfect-scrollbar style="max-width: 600px; max-height: 80vh;">
-          <div class="row border-bottom" [ngClass]="{
+  <div class="col-sm-3 bg-light inbox-border" *ngIf="messages.length > 0">
+    <perfect-scrollbar style="max-width: 600px; max-height: 80vh;">
+      <div class="row border-bottom" [ngClass]="{
           'unread-message': message.isVisiblePOS }" *ngFor="let message of messages;let i=index">
-            <div class="col-sm-12 inbox" (click)="ProcessMessage(message.eventId)">
-              <div class=" mt-3 mb-3">
-                <p class="inbox-head letter-padding">{{message.eventTypeName}}</p>
-                <p class="inbox-body letter-padding">{{message.message}}</p>
-                <p class="inbox-date letter-padding">{{message.timeStamp }}</p>
-              </div>
-            </div>
+        <div class="col-sm-12 inbox" (click)="ProcessMessage(message.eventId)">
+          <div class=" mt-3 mb-3">
+            <p class="inbox-head letter-padding">{{message.eventTypeName}}</p>
+            <p class="inbox-body letter-padding">{{message.message}}</p>
+            <p class="inbox-date letter-padding">{{message.timeStamp }}</p>
           </div>
-        </perfect-scrollbar>
+        </div>
       </div>
-      <div class="col-sm-1"></div>
-      <div class="col-sm-8 bg-light message-border" >
-          <perfect-scrollbar *ngIf="messageInfo" style="max-width: 1600px; max-height: 80vh; padding:0; margin: 0;">
-       <div> 
-           <span class="bold">To </span> <span class="highlight"> {{messageInfo.ToAddress}}</span><br /> 
-                <span class="bold"> From Name </span> <span class="highlight">{{messageInfo.DomainName}}</span><br />
-                 <span class="bold"> From Address </span> <span class="highlight">{{messageInfo.FromAddress}}</span> <span class="red"> resolutions@t-mobilepos.com</span><br />
-                    <span class="bold"> Subject:</span> Changeback Notice - Please Read Immediately<br />
-                      <span class="bold"> Content</span><br /><br /> 
-              </div>
-  
-              <div class="center">ATTENTION:<br />
-                <span class="bold"> CHARGEBACK NOTICE</span><br />
-                ———————————————<br /><br />
-              </div>
-  
-  
-              <div> <span class="bold">Dear</span> <span class="highlight"> {{messageInfo.FirstName}} {{messageInfo.LastName}}</span>,<br />
-                <span class="bold"> Account Number:</span> <span class="highlight"> {{messageInfo.AccountNumber}}</span><br /><br />
-               </div>
-  
-  
-              <p> A Chargeback has been issued against your account by your customer. This is a formal dispute of a
-                credit card transaction and the funds have been returned to the cardholder by their financial
-                institution. To better understand Chargebacks please refer to our  <span class="highlight">Help site</span>.</p>
-  
-  
-  
-              <p> As this mater is time sensitive, you must contact us within 10 calendar days of the date this email was
-                sent. If we do not receive your documents before the deadline, you may lose your right to respond with
-                the card brands, No mater how you choose to resolve this chargeback, please inform us of your intended
-                method of resolution.</p>
-  
-  
-  
-              <p> Chargeback Information:</p>
-  
-  
-              <ul>
-                <li> Card Number: XXXX-XXXX-XXXX <span class="highlight">{{messageInfo.MaskedCC}}</span> </li>
-                <li> Transaction Number:<span class="highlight">{{messageInfo.TransactionNumber}}</span> </li>
-                <li> Transaction Date:<span class="highlight">{{messageInfo.TransactionDate}}</span> </li>
-                <li> Chargeback Amount: $<span class="highlight">{{messageInfo.ChargebackAmount}}</span> </li>
-                <li> Reason: <span class="highlight">{{messageInfo.ReasonCode}}</span> </li>
-              </ul>
-      
+    </perfect-scrollbar>
+  </div>
+  <div class="col-sm-1"></div>
 
-  
-              <p> Please inform us. Of your intended method of resolution at <span class="red">resolutions@t-mobilepos.com</span>. the following
-                include some potential options for resolution:</p>
-  
-                <ul>
-                  <li> Reach out to the cardholder directly to resolve the dispute. We are unable to tell you who the
-                    cardholder is. This Information may be available within your own records. </li>
-                  <li> If this dispute was initiated in error, you may accept a different form of payment. This form of
-                    payment should be cash or a check. If the card holder is known to you and the amount is relatively
-                    small,
-                    it is considered safe to accept credit card as long as it is not the same numbered card. Having the
-                    cardholder contact their bank to reverse/ cancel the chargeback is not a reliable option. </li>
-                  <li> If your customer is due a refund, you may accept this chargeback as a “refund” as the cardholder has
-                    already been credited through the chargeback process. </li>
-                  <li> To dispute the chargeback, please log in to the <span class="red">POS portal</span> and access the Document Upload page.
-                    Select the Disputes Option and attach all supporting documentation to the corresponding transaction
-                    number. </li>
-                </ul>
-   
-            </perfect-scrollbar>
-  
+  <div class="default-message col-sm-11 bg-light message-border" *ngIf="messages.length === 0">
+    No messages loaded. Please check your network connection and refresh the browser.
+  </div>
+  <div class="col-sm-8 bg-light message-border" *ngIf="messages.length > 0">
+    <div *ngIf="messages.length > 0 && !messageInfo" class="default-message">
+      Please select a message from inbox to view message info.
+    </div>
 
-</div>
+    <perfect-scrollbar *ngIf="messageInfo" style="max-width: 1600px; max-height: 80vh; padding:0; margin: 0;">
+      <div>
+        <span class="bold">To </span> <span class="highlight"> {{messageInfo.ToAddress}}</span><br />
+        <span class="bold"> From Name </span> <span class="highlight">{{messageInfo.DomainName}}</span><br />
+        <span class="bold"> From Address </span> <span class="highlight">{{messageInfo.FromAddress}}</span> <span class="red">
+          resolutions@t-mobilepos.com</span><br />
+        <span class="bold"> Subject:</span> Changeback Notice - Please Read Immediately<br />
+        <span class="bold"> Content</span><br /><br />
+      </div>
+
+      <div class="center">ATTENTION:<br />
+        <span class="bold"> CHARGEBACK NOTICE</span><br />
+        ———————————————<br /><br />
+      </div>
+
+
+      <div> <span class="bold">Dear</span> <span class="highlight"> {{messageInfo.FirstName}} {{messageInfo.LastName}}</span>,<br />
+        <span class="bold"> Account Number:</span> <span class="highlight"> {{messageInfo.AccountNumber}}</span><br /><br />
+      </div>
+
+
+      <p> A Chargeback has been issued against your account by your customer. This is a formal dispute of a
+        credit card transaction and the funds have been returned to the cardholder by their financial
+        institution. To better understand Chargebacks please refer to our <span class="highlight">Help site</span>.</p>
+
+
+
+      <p> As this mater is time sensitive, you must contact us within 10 calendar days of the date this email was
+        sent. If we do not receive your documents before the deadline, you may lose your right to respond with
+        the card brands, No mater how you choose to resolve this chargeback, please inform us of your intended
+        method of resolution.</p>
+
+
+
+      <p> Chargeback Information:</p>
+
+
+      <ul>
+        <li> Card Number: XXXX-XXXX-XXXX <span class="highlight">{{messageInfo.MaskedCC}}</span> </li>
+        <li> Transaction Number:<span class="highlight">{{messageInfo.TransactionNumber}}</span> </li>
+        <li> Transaction Date:<span class="highlight">{{messageInfo.TransactionDate}}</span> </li>
+        <li> Chargeback Amount: $<span class="highlight">{{messageInfo.ChargebackAmount}}</span> </li>
+        <li> Reason: <span class="highlight">{{messageInfo.ReasonCode}}</span> </li>
+      </ul>
+
+
+
+      <p> Please inform us. Of your intended method of resolution at <span class="red">resolutions@t-mobilepos.com</span>.
+        the following
+        include some potential options for resolution:</p>
+
+      <ul>
+        <li> Reach out to the cardholder directly to resolve the dispute. We are unable to tell you who the
+          cardholder is. This Information may be available within your own records. </li>
+        <li> If this dispute was initiated in error, you may accept a different form of payment. This form of
+          payment should be cash or a check. If the card holder is known to you and the amount is relatively
+          small,
+          it is considered safe to accept credit card as long as it is not the same numbered card. Having the
+          cardholder contact their bank to reverse/ cancel the chargeback is not a reliable option. </li>
+        <li> If your customer is due a refund, you may accept this chargeback as a “refund” as the cardholder has
+          already been credited through the chargeback process. </li>
+        <li> To dispute the chargeback, please log in to the <span class="red">POS portal</span> and access the
+          Document Upload page.
+          Select the Disputes Option and attach all supporting documentation to the corresponding transaction
+          number. </li>
+      </ul>
+
+    </perfect-scrollbar>
+
+
+  </div>
 </div>
