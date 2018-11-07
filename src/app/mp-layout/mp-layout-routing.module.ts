@@ -25,7 +25,7 @@ const routes: Routes = [
 
             // Partners
             { path: 'partners/dashboard', loadChildren: '../mp-partners/mp-partners-dashboard/mp-partners.module#MpPartnersModule' },
-            // { path: 'messages/archive', loadChildren: '../mp-messages/mp-archive/mp-archive.module#MpArchivedModule' },
+            { path: 'partners/form', loadChildren: '../mp-partners/mp-partners-form/mp-partners-form.module#MpPartnersFormModule' },
 
 
             // Reports

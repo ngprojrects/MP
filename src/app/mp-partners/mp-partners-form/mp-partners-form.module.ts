@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MpPartnersFormComponent } from './mp-partners-form.component';
 import { MpPartnersFormRoutingModule } from './mp-partners-form-routing.module';
 
 @NgModule({
     imports: [
         CommonModule,
-
+        FormsModule,
+        ReactiveFormsModule,
         MpPartnersFormRoutingModule,
 
     ],
@@ -15,4 +16,4 @@ import { MpPartnersFormRoutingModule } from './mp-partners-form-routing.module';
         MpPartnersFormComponent,
     ]
 })
-export class MpPartnersModule { }
+export class MpPartnersFormModule { }
