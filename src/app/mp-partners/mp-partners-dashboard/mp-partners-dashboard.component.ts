@@ -11,9 +11,6 @@ export class MpPartnersDashboardComponent implements OnInit {
   constructor() { }
   blockList: Block[];
   ngOnInit() {
-    // if (this.partnersList !== null && this.partnersList !== undefined) {
-    //   this.partnersList = new Partner();
-    // }
     this.blockList = [{
       itemName: 'Partners',
       imagePath: '/src/assets/images/baseline_account_balance_black_18dp.png',
@@ -40,25 +37,5 @@ export class MpPartnersDashboardComponent implements OnInit {
     }
     ];
 
-    // const storedValue = localStorage.getItem('new');
-    // if (storedValue !== null || storedValue !== undefined) {
-    //   const valueArray = storedValue.split(',');
-    //   this.partnersList.push({
-    //     name: valueArray[0],
-    //     brand: valueArray[1],
-    //     streetAddress: valueArray[2],
-    //     city: valueArray[3],
-    //     country: valueArray[4],
-    //     state: valueArray[5],
-    //     postalCode: valueArray[6],
-    //     phoneNumber: valueArray[7],
-    //     websiteUrl: valueArray[8]
-    //   });
   }
 }
-
-
-
-
-}
-

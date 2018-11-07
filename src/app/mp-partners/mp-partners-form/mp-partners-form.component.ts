@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Partner } from 'src/app/models/partner';
 
 @Component({
   selector: 'app-mp-partners-form',
@@ -8,32 +8,21 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export class MpPartnersFormComponent implements OnInit {
 
-  PartnersForm: FormGroup;
-  states: any;
-  countries: any;
-  constructor(fb: FormBuilder) {
-    this.PartnersForm = fb.group({
-      name: ['', Validators.required],
-      brand: '',
-      streetAddress: '',
-      city: '',
-      country: '',
-      state: '',
-      postalCode: '',
-      phoneNumber: '',
-      websiteUrl: ''
-    });
-    this.states = ['Waticon', 'Coim', 'Cegar'];
-    this.countries = ['US', 'UK', 'London'];
-  }
+  brands = ['Select Brand', 'BT&T', 'CRds', 'GTm'];
+  states = ['Select State', 'Waticon', 'Coim', 'Cegar'];
+  countries = ['Select Country', 'US', 'UK', 'London'];
+  partnerValues = { name: '', brand: this.brands[0], streetAddress: '', city: '', country: this.countries[0], state: this.states[0], zip: '', phone: '', url: '' };
 
+  namePattern = '^[a-z0-9_-]{8,15}$';
+  postalCodePattern = '^(\d{5}(-\d{4})?|[A-Z]\d[A-Z] *\d[A-Z]\d)$';
+  // phonePattern = '\d{3}[\-]\d{3}[\-]\d{4}';
+  urlPattern = '^(http:\/\/www\.|https:\/\/www\.|http:\/\/|https:\/\/)?[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$'
+  constructor() {
+
+  }
   ngOnInit() { }
 
   onSubmit(formValues: any) {
-    let value: string = formValues.name + ',' + formValues.brand + ',' + formValues.streetAddress
-      + ',' + formValues.city + ',' + formValues.country + ',' +
-      formValues.state + ',' + formValues.postalCode + ',' + formValues.phoneNumber + ',' + formValues.websiteUrl;
 
-    localStorage.setItem('new', value);
   }
 }
