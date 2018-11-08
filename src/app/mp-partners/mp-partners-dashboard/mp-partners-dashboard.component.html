@@ -1,0 +1,95 @@
+<div class="row mainDiv">
+  <div class="col">
+    <div class="row">
+      <div class="col-6">
+        <h5 style="text-align:left">Partners</h5>
+      </div>
+      <div class="col-6">
+        <button class="btn btn-secondary" style="float:right">
+          Add Partner
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row interDiv">
+  <div class="col">
+    <div class="row">
+      <app-partners-block class="col-3" [blockData]='blockList[0]'>
+      </app-partners-block>
+      <app-partners-block class="col-3" [blockData]='blockList[1]'>
+      </app-partners-block>
+      <app-partners-block class="col-3" [blockData]='blockList[2]'>
+      </app-partners-block>
+      <app-partners-block class="col-3" [blockData]='blockList[3]'>
+      </app-partners-block>
+    </div>
+  </div>
+</div>
+<div class="row divBorder">
+  <div class="col-10">
+    <input type="text" placeholder="Search Partner Name">
+  </div>
+  <div class="col-1">
+    <button class="btn btn-secondary">Search</button>
+  </div>
+  <div class="col-1 dropdown">
+    <img src='/src/assets/images/baseline_vertical_align_bottom_black_18dp.png' class="btn btn-sm btn-secondary dropdown-toggle"
+      type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" />
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#">Export As Excel</a>
+      <a class="dropdown-item" href="#">Export As CSV</a>
+      <a class="dropdown-item" href="#">Export As PDF</a>
+    </div>
+  </div>
+
+</div>
+<div class="row divBorder">
+  <table class="table table-striped">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col"></th>
+        <th scope="col">PARTNERS</th>
+        <th scope="col">AGENCIES</th>
+        <th scope="col">ACCOUNTS</th>
+        <th scope="col">ACTIVE LOCATIONS</th>
+        <th scope="col">INACTIVE LOCATIONS</th>
+        <th scope="col">DELETED LOCATIONS</th>
+        <th scope="col">TOTAL LOCATIONS</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="row">
+          <img src="/src/assets/images/baseline_edit_black_18dp.png" />
+        </th>
+        <td>BB&T</td>
+        <td>32</td>
+        <td>7</td>
+        <td>175</td>
+        <td>9</td>
+        <td>7</td>
+        <td>191</td>
+        <td>
+          <img src="/src/assets/images/baseline_delete_sweep_black_18dp.png" />
+        </td>
+      </tr>
+      <tr *ngFor='let item of partnersList'>
+        <th scope="row">
+          <img src="/src/assets/images/baseline_edit_black_18dp.png" />
+        </th>
+        <td>{{item.name}}</td>
+        <td>32</td>
+        <td>7</td>
+        <td>175</td>
+        <td>9</td>
+        <td>7</td>
+        <td>191</td>
+        <td>
+          <img src="/src/assets/images/baseline_delete_sweep_black_18dp.png" />
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

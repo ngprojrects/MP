@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {HttpClient, HttpErrorResponse, HttpHeaders} from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { HttpClientModule } from '@angular/common/http';
-import {CurrencyPipe, DatePipe, DecimalPipe, PercentPipe} from '@angular/common';
+import { CurrencyPipe, DatePipe, DecimalPipe, PercentPipe } from '@angular/common';
 import { GetInboxService } from './services/get-inbox.service';
 import { HttpModule } from '@angular/http';
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
@@ -60,8 +60,10 @@ import { AuthService } from './services/auth.service';
     CurrencyPipe,
     PercentPipe,
     DecimalPipe,
-    GetInboxService,{  provide: PERFECT_SCROLLBAR_CONFIG,
-      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG}
+    GetInboxService, {
+      provide: PERFECT_SCROLLBAR_CONFIG,
+      useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
+    }
     // AuthService
   ],
   bootstrap: [AppComponent]

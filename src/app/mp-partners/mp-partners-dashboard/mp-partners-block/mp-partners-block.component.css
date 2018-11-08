@@ -1,0 +1,27 @@
+.op-card {
+  border-style: solid;
+  border-color: rgb(41, 39, 39);
+  text-align: center;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+hr {
+  border-style: solid .5px;
+  border-color: rgb(41, 39, 39);
+  margin-top: 0px;
+  margin-bottom: 15px
+}
+
+img {
+  padding: 6px;
+  margin: 6px;
+  border: 0px;
+}
+
+h6 {
+  padding: 1px;
+  margin: 1px;
+}
+
+;

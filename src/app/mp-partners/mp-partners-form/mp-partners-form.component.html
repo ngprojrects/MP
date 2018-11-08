@@ -1,0 +1,83 @@
+<div class="container">
+  <form #partnersForm="ngForm">
+    <div [hidden]="partnersForm.submitted">
+
+      <div class="form-group">
+        <label for="name">*Name</label>
+        <input id="name" name="name" class="form-control" required minlength="8" [pattern]="namePattern" [(ngModel)]="partnerValues.name"
+          #name="ngModel">
+
+        <div *ngIf="name.invalid && (name.dirty || name.touched)" class="alert alert-danger">
+
+          <div *ngIf="name.errors.required">
+            Name is required.
+          </div>
+          <div *ngIf="name.errors.minlength">
+            Name must be at least 8 characters long.
+          </div>
+          <div *ngIf="name.errors.pattern">
+            Invalid Name.
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="brand">Brand</label>
+        <select id="brand" name="brand" class="form-control" [(ngModel)]="partnerValues.brand">
+          <option *ngFor="let p of brands" [value]="p">{{p}}</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="streetAddress">Street Address</label>
+        <input id="streetAddress" class="form-control" name="streetAddress" [(ngModel)]="partnerValues.streetAddress">
+      </div>
+      <div class="form-group">
+        <label for="city">City</label>
+        <input id="city" class="form-control" name="city" [(ngModel)]="partnerValues.city">
+      </div>
+
+      <div class="form-group">
+        <label for="country">Country</label>
+        <select placeholder="Select A Country" id="country" name="country" class="form-control" [(ngModel)]="partnerValues.country">
+          <option *ngFor="let p of countries" [value]="p">{{p}}</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="state">State</label>
+        <select placeholder="Select A Brand" id="state" name="state" class="form-control" [(ngModel)]="partnerValues.state">
+          <option *ngFor="let p of states" [value]="p">{{p}}</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="zip">Postal Code</label>
+        <input id="zip" class="form-control" name="zip" [(ngModel)]="partnerValues.zip">
+      </div>
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input id="phone" class="form-control" name="phone" [(ngModel)]="partnerValues.phone">
+        <input id="phone" class="form-control" minlength="5" name="phone" [pattern]="phonePattern" [textMask]="{mask: phoneMask, guide: true}" 
+          [(ngModel)]="partnerValues.phone" #phone="ngModel" >
+      </div>
+
+      <div class="form-group">
+        <label for="url">Website URL</label>
+        <input id="url" class="form-control" name="url" [(ngModel)]="partnerValues.url" [pattern]='urlPattern' #url="ngModel">
+        <div *ngIf="url.invalid && (url.dirty || url.touched)" class="alert alert-danger">
+
+          <div *ngIf="url.errors.pattern">
+            Not a valid Website URL. Valid format: http://www.mywebsite.com </div>
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-default" [disabled]="partnersForm.invalid">Submit</button>
+      <button type="button" class="btn btn-default" (click)="partnersForm.resetForm({})">Reset</button>
+    </div>
+    <div class="submitted-message" *ngIf="partnersForm.submitted">
+      <p>You've submitted new brand, {{ partnersForm.value.name }}!</p>
+      <!-- <button (click)="partnersForm.resetForm({})">Add new </button> -->
+    </div>
+  </form>
+
+</div>
